@@ -612,7 +612,7 @@ function AskQuestionModal({
   onClose: () => void;
   onSubmit: (q: Question) => void;
 }) {
-  if (!isOpen) return null;
+  // if (!isOpen) return null;
   const [title, setTitle] = useState("");
   const [code, setCode] = useState("");
   const [tags, setTags] = useState("");
@@ -941,9 +941,7 @@ export default function App() {
   const [questions, setQuestions] = useState<Question[]>(initialQuestions);
   const [filter, setFilter] = useState("all");
   const [isAskQuestionModalOpen, setIsAskQuestionModalOpen] = useState(false);
-  const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(
-    null
-  );
+  const [, setSelectedQuestion] = useState<Question | null>(null);
   const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
   const [joinedCollectives, setJoinedCollectives] = useState<string[]>([]);
   const [profileImage, setProfileImage] = useState(
