@@ -24,3 +24,35 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.scrollable {
+  overflow: auto;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.4);
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable:hover {
+  scrollbar-color: rgba(107, 114, 128, 0.4) transparent;
+}
+
+button {
+  cursor: pointer;
+}
